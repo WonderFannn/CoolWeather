@@ -1,8 +1,10 @@
-package com.personal.wangfan.coolweather;
+package com.personal.wangfan.coolweather.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.personal.wangfan.coolweather.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
