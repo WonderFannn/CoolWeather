@@ -4,6 +4,6 @@
     <list>
         <mapping class="com.personal.wangfan.coolweather.db.Provence" />
         <mapping class="com.personal.wangfan.coolweather.db.City" />
-        <mapping class="com.personal.wangfan.coolweather.db.Country" />
+        <mapping class="com.personal.wangfan.coolweather.db.County" />
     </list>
 </litepal>

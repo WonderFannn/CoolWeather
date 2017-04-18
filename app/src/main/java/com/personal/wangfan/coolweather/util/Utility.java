@@ -3,13 +3,12 @@ package com.personal.wangfan.coolweather.util;
 import android.text.TextUtils;
 
 import com.personal.wangfan.coolweather.db.City;
-import com.personal.wangfan.coolweather.db.Country;
+import com.personal.wangfan.coolweather.db.County;
 import com.personal.wangfan.coolweather.db.Provence;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 /**
  * Created by Administrator on 2017/4/18 0018.
@@ -56,17 +55,17 @@ public class Utility {
         return false;
     }
 
-    public static boolean handleCountryResponse (String response, int cityId){
+    public static boolean handleCountyResponse (String response, int cityId){
         if (!TextUtils.isEmpty(response)){
             try {
                 JSONArray allCountry = new JSONArray(response);
                 for (int i = 0; i < allCountry.length(); i++){
-                    JSONObject countryObject = allCountry.getJSONObject(i);
-                    Country country = new Country();
-                    country.setWeatherId(countryObject.getString("weather_id"));
-                    country.setCountryName(countryObject.getString("name"));
-                    country.setCityId(cityId);
-                    country.save();
+                    JSONObject countyObject = allCountry.getJSONObject(i);
+                    County county = new County();
+                    county.setWeatherId(countyObject.getString("weather_id"));
+                    county.setCountyName(countyObject.getString("name"));
+                    county.setCityId(cityId);
+                    county.save();
                 }
                 return true;
             }catch (JSONException e){
