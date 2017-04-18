@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.text)
     TextView textView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
